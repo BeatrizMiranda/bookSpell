@@ -3,7 +3,7 @@ import 'package:google_fonts/google_fonts.dart';
 
 import 'appColors.dart';
 
-class TextStyles {
+class AppTextStyles {
   static final splashHeading = GoogleFonts.firaCode(
     fontSize: 23,
     fontWeight: FontWeight.w400,

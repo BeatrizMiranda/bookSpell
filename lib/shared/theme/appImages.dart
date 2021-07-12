@@ -1,3 +1,3 @@
 class AppImages {
-  static const logoSplash = "assets/images/logoSplash.svg";
+  static const logoSplash = "assets/images/logoSplash.png";
 }
