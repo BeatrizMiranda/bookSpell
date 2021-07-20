@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-
 import '/shared/models/UserModel.dart';
 
 class AuthController {
@@ -8,12 +7,12 @@ class AuthController {
 
   UserModel get user => _user!;
 
-  Future<void> setUser(BuildContext ctx, UserModel? user) {
-    // if (user == null) return Navigator.pushReplacementNamed(ctx, '/guest');
+  Future<Object> setUser(BuildContext ctx, UserModel? user) async {
+    if (user == null) return Navigator.pushReplacementNamed(ctx, '/guest');
 
     _user = user;
-    // saveUser(user);
-    return Navigator.pushNamed(ctx, '/home');
+    saveUser(user);
+    return Navigator.pushReplacementNamed(ctx, '/home');
   }
 
   Future<void> saveUser(UserModel user) async {
@@ -23,7 +22,7 @@ class AuthController {
     return;
   }
 
-  Future<void> currentUser(BuildContext context) async {
+  Future<Object> currentUser(BuildContext context) async {
     final instance = await SharedPreferences.getInstance();
     await Future.delayed(Duration(seconds: 2));
 

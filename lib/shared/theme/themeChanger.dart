@@ -1,27 +1,20 @@
-import 'appThemes.dart';
 import 'package:flutter/material.dart';
+import 'appThemes.dart';
 
 class ThemeChanger with ChangeNotifier {
-  ThemeMode _themeMode = ThemeMode.system;
-
-  ThemeMode get themeMode => _themeMode;
+  ThemeData _themeMode = AppThemes.darkTheme;
 
   bool isDarkMode() {
-    return _themeMode == ThemeMode.dark;
+    return _themeMode == AppThemes.darkTheme;
   }
 
   void toogleTheme(bool status) {
-    _themeMode = status ? ThemeMode.dark : ThemeMode.light;
-    notifyListeners();
-  }
-
-  void setTheme(ThemeMode themeMode) {
-    _themeMode = themeMode;
+    _themeMode = status ? AppThemes.darkTheme : AppThemes.lightTheme;
     notifyListeners();
   }
 
   ThemeData getThemeData() {
-    return _themeMode == ThemeMode.dark
+    return _themeMode == AppThemes.darkTheme
         ? AppThemes.darkTheme
         : AppThemes.lightTheme;
   }

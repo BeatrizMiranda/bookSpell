@@ -1,4 +1,4 @@
-import 'package:bookspell/shared/components/BottomSheetConfig/BottomSheetConfig.dart';
+import 'package:bookspell/shared/components/Header/Header.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatefulWidget {
@@ -12,8 +12,14 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: PreferredSize(
+        preferredSize: Size.fromHeight(200),
+        child: Header(),
+      ),
       body: Container(
-        child: ConfigBottomSheet(),
+        child: Column(
+          children: [],
+        ),
       ),
     );
   }

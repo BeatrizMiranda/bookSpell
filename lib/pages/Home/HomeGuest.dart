@@ -1,4 +1,4 @@
-import 'package:bookspell/shared/components/BottomSheetConfig/BottomSheetConfig.dart';
+import 'package:bookspell/shared/components/Header/Header.dart';
 import 'package:flutter/material.dart';
 
 class HomeGuest extends StatefulWidget {
@@ -12,7 +12,7 @@ class _HomeGuestState extends State<HomeGuest> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Container(child: ConfigBottomSheet()),
+      body: Container(child: Header()),
     );
   }
 }
