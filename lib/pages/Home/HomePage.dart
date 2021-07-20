@@ -1,3 +1,4 @@
+import 'package:bookspell/shared/components/Header/Header.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatefulWidget {
@@ -10,8 +11,16 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: (Text('aa')),
+    return Scaffold(
+      appBar: PreferredSize(
+        preferredSize: Size.fromHeight(200),
+        child: Header(),
+      ),
+      body: Container(
+        child: Column(
+          children: [],
+        ),
+      ),
     );
   }
 }

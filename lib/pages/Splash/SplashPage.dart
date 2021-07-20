@@ -1,26 +1,17 @@
-import 'package:bookspell/shared/theme/appColors.dart';
-import 'package:bookspell/shared/theme/appImages.dart';
-import 'package:bookspell/shared/theme/appTextStyles.dart';
+import '/shared/auth/authController.dart';
+import '/shared/constants/appColors.dart';
+import '/shared/constants/appImages.dart';
+import '/shared/constants/appTextStyles.dart';
 import 'package:flutter/material.dart';
 
-class SplashPage extends StatefulWidget {
+class SplashPage extends StatelessWidget {
   const SplashPage({Key? key}) : super(key: key);
 
   @override
-  _SplashPageState createState() => _SplashPageState();
-}
-
-class _SplashPageState extends State<SplashPage> {
-  @override
-  void initState() async {
-    await Future.delayed(const Duration(seconds: 2), () {});
-    // Navigator.pushReplacementNamed(context, "/home");
-
-    super.initState();
-  }
-
-  @override
   Widget build(BuildContext context) {
+    final authController = AuthController();
+    authController.currentUser(context);
+
     return Scaffold(
       backgroundColor: AppColors.darkerBg,
       body: Column(
