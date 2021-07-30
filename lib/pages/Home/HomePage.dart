@@ -1,4 +1,5 @@
-import 'package:bookspell/shared/components/Header/Header.dart';
+import '/components/CustomButton/CustomButton.dart';
+import '/components/Header/Header.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatefulWidget {
@@ -18,7 +19,12 @@ class _HomePageState extends State<HomePage> {
       ),
       body: Container(
         child: Column(
-          children: [],
+          children: [
+            CustomButton(
+              content: 'Crie uma conta',
+              onPressed: () {},
+            )
+          ],
         ),
       ),
     );

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 class AppColors {
   static final white = Color(0xFFFFFFFF);
+  static final smokeWhite = Color(0xFFFBFBFB);
   static final textBlack = Color(0xFF333333);
   static final blue = Color(0xFF051459);
   static final lightBlack = Color(0xFF474544);

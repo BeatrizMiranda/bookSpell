@@ -1,4 +1,4 @@
-import 'package:bookspell/shared/theme/themeChanger.dart';
+import '/shared/theme/themeChanger.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:flutter_feather_icons/flutter_feather_icons.dart';
@@ -34,6 +34,7 @@ void showBottomConfig(BuildContext context, ThemeChanger themeChanger) {
             child: Column(
               mainAxisSize: MainAxisSize.min,
               children: [
+                Text('Configurações'),
                 Switch(
                   value: themeChanger.isDarkMode(),
                   onChanged: themeChanger.toogleTheme,

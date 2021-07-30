@@ -31,7 +31,15 @@ class _HeaderState extends State<Header> {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Text('Bem vindo!', style: AppTextStyles.title),
+                      Expanded(
+                        child: Text(
+                          'Bem vindo!',
+                          overflow: TextOverflow.fade,
+                          style: AppTextStyles.title,
+                          maxLines: 1,
+                          softWrap: false,
+                        ),
+                      ),
                       ConfigBottomSheet()
                     ],
                   ),
