@@ -24,6 +24,11 @@ class AppTextStyles {
     fontWeight: FontWeight.w600,
     color: AppColors.modalBg,
   );
+  static final subtitleWhite = GoogleFonts.montserrat(
+    fontSize: 18,
+    fontWeight: FontWeight.w600,
+    color: AppColors.white,
+  );
   static final corpo = GoogleFonts.montserrat(
     fontSize: 18,
     fontWeight: FontWeight.w400,

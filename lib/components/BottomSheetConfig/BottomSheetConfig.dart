@@ -1,3 +1,5 @@
+import 'package:bookspell/shared/constants/appTextStyles.dart';
+
 import '/shared/theme/themeChanger.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -34,11 +36,20 @@ void showBottomConfig(BuildContext context, ThemeChanger themeChanger) {
             child: Column(
               mainAxisSize: MainAxisSize.min,
               children: [
-                Text('Configurações'),
+                Align(
+                  alignment: Alignment.centerRight,
+                  child: GestureDetector(
+                    onTap: () {
+                      Navigator.pop(context);
+                    },
+                    child: Icon(FeatherIcons.x, size: 30),
+                  ),
+                ),
+                Text('Configurações', style: AppTextStyles.subtitleWhite),
                 Switch(
                   value: themeChanger.isDarkMode(),
                   onChanged: themeChanger.toogleTheme,
-                ),
+                )
               ],
             ),
           );

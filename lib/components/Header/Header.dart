@@ -1,4 +1,4 @@
-import '/shared/components/BottomSheetConfig/BottomSheetConfig.dart';
+import '/components/BottomSheetConfig/BottomSheetConfig.dart';
 import '/shared/constants/appImages.dart';
 import '/shared/constants/appTextStyles.dart';
 import 'package:flutter/material.dart';

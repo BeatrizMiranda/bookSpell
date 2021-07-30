@@ -3,11 +3,7 @@ import 'package:bookspell/components/Menu/FloatingActionMenu.dart';
 
 import '/components/CustomButton/CustomButton.dart';
 import '/components/Header/Header.dart';
-import '/components/IconWithLabel/IconWithLabel.dart';
-import '/shared/constants/appColors.dart';
-import '/shared/constants/appImages.dart';
 import '/shared/constants/appTextStyles.dart';
-import 'package:flutter_feather_icons/flutter_feather_icons.dart';
 
 import 'package:flutter/material.dart';
 
