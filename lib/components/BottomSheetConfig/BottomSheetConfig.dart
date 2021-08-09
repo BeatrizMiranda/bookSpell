@@ -45,11 +45,38 @@ void showBottomConfig(BuildContext context, ThemeChanger themeChanger) {
                     child: Icon(FeatherIcons.x, size: 30),
                   ),
                 ),
-                Text('Configurações', style: AppTextStyles.subtitleWhite),
-                Switch(
+                Text('Configurações', style: AppTextStyles.title),
+                SizedBox(height: 40),
+                SwitchListTile(
+                  title: Text('Theme', style: AppTextStyles.textLink),
                   value: themeChanger.isDarkMode(),
                   onChanged: themeChanger.toogleTheme,
-                )
+                ),
+                SizedBox(height: 10),
+                InkWell(
+                  child: Container(
+                    padding: EdgeInsets.symmetric(vertical: 20, horizontal: 15),
+                    alignment: Alignment.centerLeft,
+                    child: Text(
+                      'Solicitar um novo livro',
+                      style: AppTextStyles.textLink,
+                    ),
+                  ),
+                  onTap: () {},
+                ),
+                SizedBox(height: 15),
+                InkWell(
+                  child: Container(
+                    padding: EdgeInsets.symmetric(vertical: 20, horizontal: 15),
+                    alignment: Alignment.centerLeft,
+                    child: Text(
+                      'Sair',
+                      style: AppTextStyles.textLink,
+                    ),
+                  ),
+                  onTap: () {},
+                ),
+                SizedBox(height: 10),
               ],
             ),
           );

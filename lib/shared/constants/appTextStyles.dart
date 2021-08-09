@@ -19,15 +19,13 @@ class AppTextStyles {
     fontSize: 20,
     fontWeight: FontWeight.w600,
   );
+  static final textLink = GoogleFonts.montserrat(
+    fontSize: 18,
+    fontWeight: FontWeight.w600,
+  );
   static final subtitle = GoogleFonts.montserrat(
     fontSize: 18,
     fontWeight: FontWeight.w600,
-    color: AppColors.modalBg,
-  );
-  static final subtitleWhite = GoogleFonts.montserrat(
-    fontSize: 18,
-    fontWeight: FontWeight.w600,
-    color: AppColors.white,
   );
   static final corpo = GoogleFonts.montserrat(
     fontSize: 18,
