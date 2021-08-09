@@ -1,5 +1,5 @@
-import '/components/IconWithLabel/IconWithLabel.dart';
-import '/shared/constants/appColors.dart';
+import 'package:bookspell/components/IconWithLabel/IconWithLabel.dart';
+import 'package:bookspell/shared/constants/appColors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_feather_icons/flutter_feather_icons.dart';
 

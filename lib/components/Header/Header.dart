@@ -1,6 +1,6 @@
-import '/components/BottomSheetConfig/BottomSheetConfig.dart';
-import '/shared/constants/appImages.dart';
-import '/shared/constants/appTextStyles.dart';
+import 'package:bookspell/components/BottomSheetConfig/BottomSheetConfig.dart';
+import 'package:bookspell/shared/constants/appImages.dart';
+import 'package:bookspell/shared/constants/appTextStyles.dart';
 import 'package:flutter/material.dart';
 
 class Header extends StatefulWidget {

@@ -1,9 +1,9 @@
 import 'package:bookspell/components/Menu/BottomAppBar.dart';
 import 'package:bookspell/components/Menu/FloatingActionMenu.dart';
 
-import '/components/CustomButton/CustomButton.dart';
-import '/components/Header/Header.dart';
-import '/shared/constants/appTextStyles.dart';
+import 'package:bookspell/components/CustomButton/CustomButton.dart';
+import 'package:bookspell/components/Header/Header.dart';
+import 'package:bookspell/shared/constants/appTextStyles.dart';
 
 import 'package:flutter/material.dart';
 

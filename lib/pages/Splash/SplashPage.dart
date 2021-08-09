@@ -1,7 +1,7 @@
-import '/shared/auth/authController.dart';
-import '/shared/constants/appColors.dart';
-import '/shared/constants/appImages.dart';
-import '/shared/constants/appTextStyles.dart';
+import 'package:bookspell/shared/auth/authController.dart';
+import 'package:bookspell/shared/constants/appColors.dart';
+import 'package:bookspell/shared/constants/appImages.dart';
+import 'package:bookspell/shared/constants/appTextStyles.dart';
 import 'package:flutter/material.dart';
 
 class SplashPage extends StatelessWidget {

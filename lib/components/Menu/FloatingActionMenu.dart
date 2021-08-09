@@ -1,6 +1,6 @@
 import 'package:bookspell/shared/constants/appColors.dart';
 
-import '/shared/constants/appImages.dart';
+import 'package:bookspell/shared/constants/appImages.dart';
 import 'package:flutter/material.dart';
 
 class FloatingActionMenu extends StatelessWidget {

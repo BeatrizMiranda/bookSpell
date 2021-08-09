@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import '/shared/models/UserModel.dart';
+import 'package:bookspell/shared/models/UserModel.dart';
 
 class AuthController {
   UserModel? _user;

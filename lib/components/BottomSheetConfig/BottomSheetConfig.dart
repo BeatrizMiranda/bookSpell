@@ -1,6 +1,6 @@
 import 'package:bookspell/shared/constants/appTextStyles.dart';
 
-import '/shared/theme/themeChanger.dart';
+import 'package:bookspell/shared/theme/themeChanger.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:flutter_feather_icons/flutter_feather_icons.dart';

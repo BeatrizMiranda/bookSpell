@@ -1,5 +1,5 @@
-import '/components/CustomButton/CustomButton.dart';
-import '/components/Header/Header.dart';
+import 'package:bookspell/components/CustomButton/CustomButton.dart';
+import 'package:bookspell/components/Header/Header.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatefulWidget {

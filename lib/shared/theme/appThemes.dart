@@ -1,4 +1,4 @@
-import '/shared/constants/appColors.dart';
+import 'package:bookspell/shared/constants/appColors.dart';
 import 'package:flutter/material.dart';
 
 class AppThemes {
