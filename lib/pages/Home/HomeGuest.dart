@@ -1,3 +1,4 @@
+import 'package:bookspell/components/Carousel/Carousel.dart';
 import 'package:bookspell/components/Menu/BottomAppBar.dart';
 import 'package:bookspell/components/Menu/FloatingActionMenu.dart';
 
@@ -19,13 +20,24 @@ class _HomeGuestState extends State<HomeGuest> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: PreferredSize(
-        preferredSize: Size.fromHeight(200),
+        preferredSize: Size.fromHeight(130),
         child: Header(),
       ),
       body: Container(
         padding: EdgeInsets.symmetric(horizontal: 20),
         child: Column(
           children: [
+            Container(
+              padding: EdgeInsets.symmetric(horizontal: 10, vertical: 24.0),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text('Populares', style: AppTextStyles.subtitle),
+                  Carousel()
+                ],
+              ),
+            ),
+            SizedBox(height: 20),
             CustomButton(
               content: 'Crie uma conta',
               onPressed: () {},
@@ -41,7 +53,7 @@ class _HomeGuestState extends State<HomeGuest> {
       ),
       floatingActionButton: FloatingActionMenu(),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
-      bottomNavigationBar: BottomAppBarCustom(),
+      bottomNavigationBar: BottomAppBarCustom(page: 'home'),
     );
   }
 }

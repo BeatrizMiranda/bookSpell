@@ -4,7 +4,14 @@ import 'package:bookspell/shared/constants/appImages.dart';
 import 'package:flutter/material.dart';
 
 class FloatingActionMenu extends StatelessWidget {
-  const FloatingActionMenu({Key? key}) : super(key: key);
+  final String page;
+  const FloatingActionMenu({Key? key, this.page = ''}) : super(key: key);
+
+  String getImage() {
+    if (page == 'search') return AppImages.searchBookSelected;
+
+    return AppImages.searchBook;
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -20,8 +27,8 @@ class FloatingActionMenu extends StatelessWidget {
           onPressed: () {},
           backgroundColor: AppColors.white,
           child: Padding(
-            padding: EdgeInsets.only(bottom: 3, left: 2),
-            child: Image.asset(AppImages.iconSearchBook, width: 45),
+            padding: EdgeInsets.only(left: 4),
+            child: Image.asset(getImage(), width: 35),
           ),
           tooltip: 'Busque livros',
         ),

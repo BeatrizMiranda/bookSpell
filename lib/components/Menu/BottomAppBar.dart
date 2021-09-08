@@ -4,7 +4,19 @@ import 'package:flutter/material.dart';
 import 'package:flutter_feather_icons/flutter_feather_icons.dart';
 
 class BottomAppBarCustom extends StatelessWidget {
-  const BottomAppBarCustom({Key? key}) : super(key: key);
+  final String page;
+
+  const BottomAppBarCustom({Key? key, this.page = ''}) : super(key: key);
+
+  Color getHomeColor() {
+    if (page == 'home') return AppColors.orangeLight;
+    return AppColors.white;
+  }
+
+  Color getListColor() {
+    if (page == 'list') return AppColors.orangeLight;
+    return AppColors.white;
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -14,13 +26,13 @@ class BottomAppBarCustom extends StatelessWidget {
       child: Row(
         children: <Widget>[
           IconWithLabel(
-            icon: Icon(FeatherIcons.home, color: AppColors.white),
+            icon: Icon(FeatherIcons.home, size: 28, color: getHomeColor()),
             label: 'Home',
             onTap: () {},
           ),
           Spacer(),
           IconWithLabel(
-            icon: Icon(FeatherIcons.list, color: AppColors.white),
+            icon: Icon(FeatherIcons.list, size: 28, color: getListColor()),
             label: 'Listas',
             onTap: () {},
           ),
