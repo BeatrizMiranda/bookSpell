@@ -7,15 +7,17 @@ class CustomButton extends StatelessWidget {
     Key? key,
     required this.content,
     required this.onPressed,
+    this.noPadding = false,
   }) : super(key: key);
 
   final String content;
+  final bool noPadding;
   final VoidCallback onPressed;
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.symmetric(horizontal: 10),
+      padding: noPadding ? null : EdgeInsets.symmetric(horizontal: 10),
       child: Row(
         children: [
           Expanded(

@@ -4,6 +4,7 @@ import 'package:bookspell/components/Menu/FloatingActionMenu.dart';
 
 import 'package:bookspell/components/CustomButton/CustomButton.dart';
 import 'package:bookspell/components/Header/Header.dart';
+import 'package:bookspell/pages/AuthModal/LoginModal.dart';
 import 'package:bookspell/shared/constants/appTextStyles.dart';
 
 import 'package:flutter/material.dart';
@@ -19,6 +20,7 @@ class _HomeGuestState extends State<HomeGuest> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       appBar: PreferredSize(
         preferredSize: Size.fromHeight(130),
         child: Header(),
@@ -40,7 +42,7 @@ class _HomeGuestState extends State<HomeGuest> {
             SizedBox(height: 20),
             CustomButton(
               content: 'Crie uma conta',
-              onPressed: () {},
+              onPressed: () => openLoginModal(context),
             ),
             SizedBox(height: 20),
             Text(
