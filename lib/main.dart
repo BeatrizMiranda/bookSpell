@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
           final themeChanger = Provider.of<ThemeChanger>(ctx);
 
           return MaterialApp(
-            title: 'Flutter Demo',
+            title: 'BookSpell',
             themeMode: ThemeMode.system,
             theme: themeChanger.getThemeData(),
             initialRoute: "/splash",

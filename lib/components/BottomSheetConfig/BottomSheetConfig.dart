@@ -50,7 +50,7 @@ void showBottomConfig(BuildContext context, ThemeChanger themeChanger) {
                 SwitchListTile(
                   title: Text('Theme', style: AppTextStyles.textLink),
                   value: themeChanger.isDarkMode(),
-                  onChanged: themeChanger.toogleTheme,
+                  onChanged: themeChanger.toggleTheme,
                 ),
                 SizedBox(height: 10),
                 InkWell(

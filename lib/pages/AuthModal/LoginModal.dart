@@ -70,7 +70,7 @@ openLoginModal(context) {
   return showDialog(
     context: context,
     builder: (BuildContext context) {
-      return ModalCompoent(
+      return ModalComponent(
         title: 'Cadastrar',
         subTitle: 'Para criar sua meta e organizar suas listas de leitura!',
         form: LoginFormCompoent(loginFormKey: loginFormKey),

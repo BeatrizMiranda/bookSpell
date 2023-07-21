@@ -1,4 +1,4 @@
-import 'package:bookspell/components/Carousel/Carousel.dart';
+import 'package:bookspell/components/BooksCarousel/BooksCarousel.dart';
 import 'package:bookspell/components/Menu/BottomAppBar.dart';
 import 'package:bookspell/components/Menu/FloatingActionMenu.dart';
 
@@ -29,27 +29,30 @@ class _HomeGuestState extends State<HomeGuest> {
         padding: EdgeInsets.symmetric(horizontal: 20),
         child: Column(
           children: [
+            SizedBox(height: 32),
             Container(
               padding: EdgeInsets.symmetric(horizontal: 10, vertical: 24.0),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text('Populares', style: AppTextStyles.subtitle),
-                  Carousel()
+                  BooksCarousel()
                 ],
               ),
             ),
-            SizedBox(height: 20),
+            Spacer(),
             CustomButton(
               content: 'Crie uma conta',
               onPressed: () => openLoginModal(context),
             ),
-            SizedBox(height: 20),
+            SizedBox(height: 16),
             Text(
               'Para conseguir organizar suas leituras',
-              style: AppTextStyles.corpo,
+              style: AppTextStyles.body,
               textAlign: TextAlign.center,
-            )
+            ),
+            SizedBox(height: 32),
+            Spacer(),
           ],
         ),
       ),

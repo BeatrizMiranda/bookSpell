@@ -23,14 +23,14 @@ class CustomButton extends StatelessWidget {
           Expanded(
             child: ElevatedButton(
               style: ElevatedButton.styleFrom(
+                foregroundColor: AppColors.smokeWhite,
+                backgroundColor: AppColors.orangeLight,
                 elevation: 5,
-                onPrimary: AppColors.smokeWhite,
-                primary: AppColors.orangeLight,
                 textStyle: AppTextStyles.subtitle,
               ),
               onPressed: onPressed,
               child: Padding(
-                padding: EdgeInsets.all(14),
+                padding: EdgeInsets.symmetric(horizontal: 16, vertical: 18),
                 child: Text(content),
               ),
             ),

@@ -60,16 +60,28 @@ openSignModal(context) {
   return showDialog(
     context: context,
     builder: (BuildContext context) {
-      return ModalCompoent(
+      return ModalComponent(
         title: 'Entre',
         subTitle: 'Para criar sua meta e organizar suas listas de leitura!',
         form: SignFormCompoent(signFormKey: signFormKey),
-        link: InkWell(
-          child: Text(
-            'Não tem cadastro?',
-            style: AppTextStyles.smallLink,
-          ),
-          onTap: () => {Navigator.pop(context), openLoginModal(context)},
+        link: Row(
+          children: [
+            InkWell(
+              child: Text(
+                'Voltar para cadastro',
+                style: AppTextStyles.smallLink,
+              ),
+              onTap: () => {Navigator.pop(context), openLoginModal(context)},
+            ),
+            Spacer(),
+            InkWell(
+              child: Text(
+                'Esqueceu a senha?',
+                style: AppTextStyles.smallLink,
+              ),
+              onTap: () => {Navigator.pop(context), openLoginModal(context)},
+            ),
+          ],
         ),
         button: CustomButton(
           content: 'Entrar',

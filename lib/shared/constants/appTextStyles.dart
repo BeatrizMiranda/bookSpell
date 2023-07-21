@@ -10,7 +10,7 @@ class AppTextStyles {
     color: AppColors.white,
   );
   static final smallLink = GoogleFonts.montserrat(
-    fontSize: 15,
+    fontSize: 16,
     fontWeight: FontWeight.w600,
     color: AppColors.orange,
     decoration: TextDecoration.underline,
@@ -27,7 +27,7 @@ class AppTextStyles {
     fontSize: 18,
     fontWeight: FontWeight.w600,
   );
-  static final corpo = GoogleFonts.montserrat(
+  static final body = GoogleFonts.montserrat(
     fontSize: 18,
     fontWeight: FontWeight.w400,
   );
@@ -62,7 +62,7 @@ class AppTextStyles {
     fontSize: 20,
     fontWeight: FontWeight.w400,
   );
-  static final corpoBold = GoogleFonts.montserrat(
+  static final bodyBold = GoogleFonts.montserrat(
     fontSize: 18,
     fontWeight: FontWeight.w700,
   );

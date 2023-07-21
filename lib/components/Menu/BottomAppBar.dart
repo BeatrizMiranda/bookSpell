@@ -21,6 +21,7 @@ class BottomAppBarCustom extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BottomAppBar(
+      notchMargin: 12,
       shape: CircularNotchedRectangle(),
       color: AppColors.darkerBg,
       child: Row(

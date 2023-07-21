@@ -1,16 +1,16 @@
 import 'package:bookspell/shared/constants/appTextStyles.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:flutter_feather_icons/flutter_feather_icons.dart';
 
-class ModalCompoent extends StatelessWidget {
-  const ModalCompoent({
+class ModalComponent extends StatelessWidget {
+  const ModalComponent({
     Key? key,
     required this.title,
     required this.subTitle,
     required this.form,
     required this.link,
     required this.button,
+    this.backLink,
   }) : super(key: key);
 
   final String title;
@@ -18,6 +18,7 @@ class ModalCompoent extends StatelessWidget {
   final Widget form;
   final Widget link;
   final Widget button;
+  final Widget? backLink;
 
   @override
   Widget build(BuildContext context) {
@@ -39,12 +40,13 @@ class ModalCompoent extends StatelessWidget {
       children: [
         Column(
           children: [
+            if (backLink != null) Wrap(children: [backLink as Widget]),
             Row(
               mainAxisAlignment: MainAxisAlignment.start,
               children: [Text(title, style: AppTextStyles.title)],
             ),
             SizedBox(height: 25),
-            Text(subTitle, style: AppTextStyles.corpo),
+            Text(subTitle, style: AppTextStyles.body),
             SizedBox(height: 25),
             form,
             SizedBox(height: 25),

@@ -8,7 +8,7 @@ class ThemeChanger with ChangeNotifier {
     return _themeMode == AppThemes.darkTheme;
   }
 
-  void toogleTheme(bool status) {
+  void toggleTheme(bool status) {
     _themeMode = status ? AppThemes.darkTheme : AppThemes.lightTheme;
     notifyListeners();
   }
