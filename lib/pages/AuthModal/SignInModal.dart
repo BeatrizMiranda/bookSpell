@@ -1,15 +1,23 @@
 import 'package:bookspell/components/CustomButton/CustomButton.dart';
 import 'package:bookspell/components/FormTextField.dart';
-import 'package:bookspell/components/Modal/Modal.dart';
+import 'package:bookspell/components/Modal/FormModal.dart';
 import 'package:bookspell/pages/AuthModal/LoginModal.dart';
+import 'package:bookspell/pages/AuthModal/ForgetPasswordModal.dart';
 import 'package:bookspell/shared/constants/appTextStyles.dart';
 import 'package:bookspell/shared/functions/utils.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_feather_icons/flutter_feather_icons.dart';
 
-class SignFormCompoent extends StatelessWidget {
-  SignFormCompoent({Key? key, required this.signFormKey}) : super(key: key);
+class SignFormComponent extends StatelessWidget {
+  SignFormComponent({Key? key, required this.signFormKey}) : super(key: key);
   final GlobalKey<FormState> signFormKey;
+
+  String? emailValidation(String? value) {
+    if (isEmptyInput(value)) return 'Por favor preencha esse campo';
+    if (!isValidEmail(value)) return 'Coloque um email válido';
+
+    return null;
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -22,15 +30,7 @@ class SignFormCompoent extends StatelessWidget {
           FormTextField(
             label: 'Email',
             icon: FeatherIcons.mail,
-            validator: (String? value) {
-              if (isEmptyInput(value)) {
-                return 'Por favor preencha esse campo';
-              }
-              if (!isValidEmail(value)) {
-                return 'Please enter a valid email';
-              }
-              return null;
-            },
+            validator: emailValidation,
           ),
           FormTextField(
             label: 'Senha',
@@ -60,28 +60,28 @@ openSignModal(context) {
   return showDialog(
     context: context,
     builder: (BuildContext context) {
-      return ModalComponent(
+      return FormModalComponent(
+        backLink: Container(
+          alignment: Alignment.centerLeft,
+          padding: EdgeInsets.only(bottom: 20),
+          child: InkWell(
+            child: Text(
+              'Voltar para cadastro',
+              style: AppTextStyles.smallLink,
+            ),
+            onTap: () => {Navigator.pop(context), openLoginModal(context)},
+          ),
+        ),
         title: 'Entre',
         subTitle: 'Para criar sua meta e organizar suas listas de leitura!',
-        form: SignFormCompoent(signFormKey: signFormKey),
-        link: Row(
-          children: [
-            InkWell(
-              child: Text(
-                'Voltar para cadastro',
-                style: AppTextStyles.smallLink,
-              ),
-              onTap: () => {Navigator.pop(context), openLoginModal(context)},
-            ),
-            Spacer(),
-            InkWell(
-              child: Text(
-                'Esqueceu a senha?',
-                style: AppTextStyles.smallLink,
-              ),
-              onTap: () => {Navigator.pop(context), openLoginModal(context)},
-            ),
-          ],
+        form: SignFormComponent(signFormKey: signFormKey),
+        link: InkWell(
+          child: Text(
+            'Esqueceu a senha?',
+            style: AppTextStyles.smallLink,
+          ),
+          onTap: () =>
+              {Navigator.pop(context), openForgotPasswordModal(context)},
         ),
         button: CustomButton(
           content: 'Entrar',

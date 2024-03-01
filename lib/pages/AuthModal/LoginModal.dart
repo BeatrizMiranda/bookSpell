@@ -1,14 +1,14 @@
 import 'package:bookspell/components/CustomButton/CustomButton.dart';
 import 'package:bookspell/components/FormTextField.dart';
-import 'package:bookspell/components/Modal/Modal.dart';
 import 'package:bookspell/pages/AuthModal/SignInModal.dart';
+import 'package:bookspell/components/Modal/FormModal.dart';
 import 'package:bookspell/shared/constants/appTextStyles.dart';
 import 'package:bookspell/shared/functions/utils.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_feather_icons/flutter_feather_icons.dart';
 
-class LoginFormCompoent extends StatelessWidget {
-  LoginFormCompoent({Key? key, required this.loginFormKey}) : super(key: key);
+class LoginFormComponent extends StatelessWidget {
+  LoginFormComponent({Key? key, required this.loginFormKey}) : super(key: key);
   final GlobalKey<FormState> loginFormKey;
 
   @override
@@ -70,10 +70,10 @@ openLoginModal(context) {
   return showDialog(
     context: context,
     builder: (BuildContext context) {
-      return ModalComponent(
+      return FormModalComponent(
         title: 'Cadastrar',
         subTitle: 'Para criar sua meta e organizar suas listas de leitura!',
-        form: LoginFormCompoent(loginFormKey: loginFormKey),
+        form: LoginFormComponent(loginFormKey: loginFormKey),
         link: InkWell(
           child: Text(
             'Já tem cadastro? Logue!',

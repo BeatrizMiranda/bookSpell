@@ -2,22 +2,18 @@ import 'package:bookspell/shared/constants/appTextStyles.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_feather_icons/flutter_feather_icons.dart';
 
-class ModalComponent extends StatelessWidget {
-  const ModalComponent({
+class DialogModalComponent extends StatelessWidget {
+  const DialogModalComponent({
     Key? key,
     required this.title,
     required this.subTitle,
-    required this.form,
-    required this.link,
-    required this.button,
+    this.button,
     this.backLink,
   }) : super(key: key);
 
   final String title;
   final String subTitle;
-  final Widget form;
-  final Widget link;
-  final Widget button;
+  final Widget? button;
   final Widget? backLink;
 
   @override
@@ -47,15 +43,7 @@ class ModalComponent extends StatelessWidget {
             ),
             SizedBox(height: 25),
             Text(subTitle, style: AppTextStyles.body),
-            SizedBox(height: 25),
-            form,
-            SizedBox(height: 25),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.end,
-              children: [link],
-            ),
-            SizedBox(height: 25),
-            button,
+            if (button != null) Wrap(children: [button as Widget]),
           ],
         )
       ],
